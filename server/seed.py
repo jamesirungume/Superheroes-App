@@ -4,7 +4,7 @@ def seed_data():
     with app.app_context():
         # Create example powers
         # Create example powers
-        power1 = Power(name="Super Strength", description="Superhuman strength with extra power")
+        power1 = Power(name="Supr Strength", description="Superhuman strength with extra power")
         power2 = Power(name="Flight", description="Ability to fly very high")
         power3 = Power(name="Telepathy", description="Mind-reading capability")
 

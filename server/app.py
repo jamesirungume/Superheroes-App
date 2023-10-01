@@ -6,6 +6,8 @@ from flask_restful import Api,Resource
 
 from models import db, Hero,HeroPower,Power
 
+
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///superheroes.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -13,6 +15,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 migrate = Migrate(app, db)
 
 db.init_app(app)
+
+
+
 api = Api(app)
 
 class Home(Resource):
@@ -37,7 +42,7 @@ class HeroesById(Resource):
             heroes_dict= {"error":"hero not found"}
             response = make_response(jsonify(heroes_dict),404)
             return response
-        response = make_response(jsonify(heroes.serialize(),200))
+        response = make_response(jsonify(heroes.serialize()),200)
         return response
 
 api.add_resource(HeroesById,'/heroes/<int:id>')
@@ -91,7 +96,7 @@ class HeroPowers(Resource):
         return response
 
 
-api.add_resource(HeroPowers,'/heropowers')
+api.add_resource(HeroPowers,'/hero_powers')
 
 
 
