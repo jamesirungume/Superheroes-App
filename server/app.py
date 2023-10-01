@@ -27,12 +27,7 @@ def not_found(e):
 
 api = Api(app)
 
-class Home(Resource):
-    def get(self):
-        home_response = {"Home":"Superheroes API",}
-        response = make_response(jsonify(home_response),200,)
-        return response
-api.add_resource(Home,'/')
+
 
 class HeroesResource(Resource):
     def get(self):
