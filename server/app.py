@@ -13,13 +13,17 @@ app = Flask(
     template_folder='../client/build'
 )
 
-app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://my_name:obBw505hbh8jIfdSwuB3rkwXW8gMbrev@dpg-ckcjhqciibqc73cd0b7g-a.oregon-postgres.render.com/new_db_giq6'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 migrate = Migrate(app, db)
 
 db.init_app(app)
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("index.html")
 
 api = Api(app)
 
