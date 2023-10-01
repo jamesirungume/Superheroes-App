@@ -6,6 +6,13 @@ from flask_restful import Api,Resource
 
 from models import db, Hero,HeroPower,Power
 
+app = Flask(
+    __name__,
+    static_url_path='',
+    static_folder='../client/build',
+    template_folder='../client/build'
+)
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://my_name:obBw505hbh8jIfdSwuB3rkwXW8gMbrev@dpg-ckcjhqciibqc73cd0b7g-a.oregon-postgres.render.com/new_db_giq6'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

@@ -43,7 +43,7 @@ shell
 The Flask server should now be running on http://localhost:5555.
 Frontend (React)
 
-    Navigate to the client directory.
+    Navigate to the client directory
 
     shell
 
