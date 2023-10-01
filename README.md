@@ -65,7 +65,7 @@ The React app should now be accessible at http://localhost:3000.
 Usage
 
     Visit http://localhost:3000 in your web browser to access the Superheroes App.
-    Explore the various features and functionalities to manage superheroes and their powers.
+    Explore the varous features and functionalities to manage superheroes and their powers.
 
 License
 
