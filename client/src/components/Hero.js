@@ -31,7 +31,7 @@ function Hero() {
       <h2>{hero.super_name}</h2>
       <h2>AKA {hero.name}</h2>
 
-      <h3>Powers:</h3>
+      <h3>jemo power:</h3>
       <ul>
         {hero.powers.map((power) => (
           <li key={hero.id}>
